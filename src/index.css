@@ -1,0 +1,128 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-secondary overflow-x-hidden bg-[#F5F7FA];
+  /* background-color: #F5F7FA;
+  overflow-x: hidden;
+  color:  */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-black font-medium;
+}
+
+.font-poppins {
+  font-family: "poppins", sans-serif;
+}
+
+.font-roboto {
+  font-family: "roboto", sans-serif;
+}
+
+.font-oswald {
+  font-family: "oswald", sans-serif;
+}
+
+.font-dancing-script {
+  font-family: "Dancing Script", cursive;
+}
+
+.category-item:hover img {
+  @apply scale-110;
+}
+
+.category-item:hover h4 {
+  @apply text-primary underline;
+}
+
+.product-item:hover {
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.07);
+}
+
+.product-item:hover .product-item-opt {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu:hover ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu ul {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 1532px) and (max-width: 1620px) {
+  .container {
+    padding: 0 100px !important;
+  }
+}
+
+@media (min-width: 1350px) and (max-width: 1400px) {
+  .container {
+    padding: 0 100px !important;
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1100px) {
+  .container {
+    padding: 0 100px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px !important;
+  }
+}
+
+.w-custom-full {
+  width: calc(100% - 312px);
+}
+
+/* responsive */
+@media only screen and (min-width: 0px) and (max-width: 1024px) {
+  .w-custom-full {
+    width: 100% !important;
+  }
+}
+
+.login-container {
+  box-shadow: rgba(145, 158, 171, 0.3) 0px 0px 2px 0px,
+    rgba(145, 158, 171, 0.12) 0px 12px 24px -4px;
+}
+
+.box-shadow {
+  box-shadow: rgba(145, 158, 171, 0.3) 0px 0px 2px 0px,
+    rgba(145, 158, 171, 0.12) 0px 12px 24px -4px;
+}
+
+.account-content {
+  width: calc(100% - 360px);
+}
+
+/* responsive */
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .account-content {
+    width: 100% !important;
+  }
+}
