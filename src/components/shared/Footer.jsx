@@ -5,24 +5,12 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Button from "../ui/Button";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#2D3759] text-white">
+    <footer className="border-t border-border">
       <div className="container">
-        <div className="py-14 flex-col sm:flex-row border-b border-gray-600 flex items-center justify-between gap-8">
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="w-full px-7 py-5 bg-white rounded-full outline-none text-secondary"
-          />
-          <div>
-            <Button className="py-5">Subscribe</Button>
-          </div>
-        </div>
-
-        <div className="border-b border-gray-600 py-20 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="py-20 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           <div>
             <Link className="font-semibold text-2xl" href="/">
               Logo Here
@@ -32,22 +20,22 @@ const Footer = () => {
               lot of care to keep running in optimum shape.
             </p>
             <ul className="flex items-center gap-3">
-              <li className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center cursor-pointer transition-all hover:border-primary hover:text-primary">
+              <li className="w-8 h-8 rounded-full border border-border text-heading flex items-center justify-center cursor-pointer transition-all hover:border-primary hover:text-primary">
                 <Link to="#">
                   <FaFacebookF />
                 </Link>
               </li>
-              <li className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center cursor-pointer transition-all hover:border-primary hover:text-primary">
+              <li className="w-8 h-8 rounded-full border border-border text-heading flex items-center justify-center cursor-pointer transition-all hover:border-primary hover:text-primary">
                 <Link to="#">
                   <FaTwitter />
                 </Link>
               </li>
-              <li className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center cursor-pointer transition-all hover:border-primary hover:text-primary">
+              <li className="w-8 h-8 rounded-full border border-border text-heading flex items-center justify-center cursor-pointer transition-all hover:border-primary hover:text-primary">
                 <Link to="#">
                   <FaInstagram />
                 </Link>
               </li>
-              <li className="w-8 h-8 rounded-full border border-white text-white flex items-center justify-center cursor-pointer transition-all hover:border-primary hover:text-primary">
+              <li className="w-8 h-8 rounded-full border border-border text-heading flex items-center justify-center cursor-pointer transition-all hover:border-primary hover:text-primary">
                 <Link to="#">
                   <FaPinterest />
                 </Link>
@@ -56,15 +44,19 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-white text-lg mb-5">Get In Touch</h3>
+            <h3 className="text-heading font-medium text-lg mb-5 pb-3 border-b border-border">
+              Get In Touch
+            </h3>
             <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
             <p className="mt-1">support@example.com</p>
             <h2 className="text-xl text-white mt-1">+ (406) 555-0120</h2>
           </div>
 
-          <div className="text-white">
-            <h3 className="text-white text-lg mb-5">Information</h3>
-            <ul className="flex flex-col gap-3">
+          <div className="text-body text-sm">
+            <h3 className="text-heading font-medium text-lg mb-5 pb-3 border-b border-border">
+              Information
+            </h3>
+            <ul className="flex flex-col gap-4">
               <li>
                 <Link to="#">Help Center</Link>
               </li>
@@ -83,9 +75,34 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="text-white">
-            <h3 className="text-white text-lg mb-5">Useful links</h3>
-            <ul className="flex flex-col gap-3">
+          <div className="text-body text-sm">
+            <h3 className="text-heading font-medium text-lg mb-5 pb-3 border-b border-border">
+              Company
+            </h3>
+            <ul className="flex flex-col gap-4">
+              <li>
+                <Link to="#">Help Center</Link>
+              </li>
+              <li>
+                <Link to="#">Shipping</Link>
+              </li>
+              <li>
+                <Link to="#">Returns</Link>
+              </li>
+              <li>
+                <Link to="#">Policies</Link>
+              </li>
+              <li>
+                <Link to="#">Gift Cards</Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="text-body text-sm">
+            <h3 className="text-heading font-medium text-lg mb-5 pb-3 border-b border-border">
+              Useful links
+            </h3>
+            <ul className="flex flex-col gap-4">
               <li>
                 <Link to="#">My Account</Link>
               </li>
@@ -104,9 +121,13 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+      </div>
 
-        <div className="py-9 flex items-center gap-5 justify-between flex-wrap">
-          <p>Copyright © 2023 Company Name. All rights reserved</p>
+      <div className="py-[14px] flex items-center gap-5 justify-between flex-wrap border-t border-border bg-[#F8F8FB]">
+        <div className="container">
+          <p className="text-[13px] font-light text-body">
+            Copyright © 2023 Company Name. All rights reserved
+          </p>
         </div>
       </div>
     </footer>

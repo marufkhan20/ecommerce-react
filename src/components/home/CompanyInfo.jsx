@@ -5,9 +5,13 @@ const CompanyInfo = () => {
   return (
     <section className="py-14">
       <div className="container">
-        <Heading>
-          What is <span className="text-primary">Etsy?</span>
-        </Heading>
+        <Heading
+          title={
+            <span className="text-center block">
+              What is <span className="text-primary">Etsy?</span>
+            </span>
+          }
+        ></Heading>
 
         <div className="mt-12 grid sm:grid-cols-2 md:grid-cols-3 gap-[30px]">
           <div className="text-center">
