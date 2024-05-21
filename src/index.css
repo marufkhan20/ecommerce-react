@@ -1,18 +1,12 @@
-/* fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  @apply text-secondary overflow-x-hidden bg-[#F5F7FA];
+  @apply text-secondary overflow-x-hidden bg-white;
+  font-family: "Poppins", sans-serif;
   /* background-color: #F5F7FA;
   overflow-x: hidden;
   color:  */
@@ -24,23 +18,16 @@ h3,
 h4,
 h5,
 h6 {
-  @apply text-black font-medium;
+  @apply text-heading font-semibold;
+  font-family: "Manrope", sans-serif;
 }
 
 .font-poppins {
   font-family: "poppins", sans-serif;
 }
 
-.font-roboto {
-  font-family: "roboto", sans-serif;
-}
-
-.font-oswald {
-  font-family: "oswald", sans-serif;
-}
-
-.font-dancing-script {
-  font-family: "Dancing Script", cursive;
+.font-manrope {
+  font-family: "Manrope", sans-serif;
 }
 
 .category-item:hover img {

@@ -1,4 +1,6 @@
-"use client";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { Link } from "react-router-dom";
 import Breadcumb from "../components/shared/Breadcumb";
 import Button from "../components/ui/Button";
 import { useCartStore } from "../store";
@@ -54,52 +56,184 @@ const Cart = () => {
   }
   return (
     <main>
-      <Breadcumb title="Cart" pathnames={["Home", "Cart"]} />
+      <Breadcumb title="Cart Page" pathnames={["Home", "Cart"]} />
 
-      <section className="py-24">
-        <div className="container flex flex-col md:flex-row justify-between gap-12">
+      <section className="py-[70px]">
+        <div className="container flex flex-col md:flex-row justify-between gap-5">
           <div className="w-full">
             <div className="overflow-auto">
               <table className="md:w-full w-[700px] text-base text-black">
-                <thead className="border-b">
+                <thead className="border-b-2">
                   <tr>
-                    <th className="font-medium pb-6 text-left">Product</th>
-                    <th className="font-medium pb-6 text-left">Name</th>
-                    <th className="font-medium pb-6 text-left">Price</th>
-                    <th className="font-medium pb-6 text-left">Quantity</th>
-                    <th className="font-medium pb-6 text-left">Subtotal</th>
+                    <th className="font-medium text-[15px] text-heading pb-4 text-left">
+                      Product
+                    </th>
+                    <th className="font-medium text-[15px] text-heading pb-4 text-left">
+                      Price
+                    </th>
+                    <th className="font-medium text-[15px] text-heading pb-4 text-left">
+                      Quantity
+                    </th>
+                    <th className="font-medium text-[15px] text-heading pb-4 text-left">
+                      Total
+                    </th>
                   </tr>
                 </thead>
-                <tbody>{cartElements}</tbody>
+                <tbody>
+                  <tr>
+                    <td className="py-4 border-b flex items-center gap-3">
+                      <img
+                        src="/images/products/1.jpg"
+                        className="w-14"
+                        alt=""
+                      />
+                      <Link
+                        to="#"
+                        className="text-sm text-body transition-all hover:text-primary"
+                      >
+                        Crunchy Triangle Chips Snacks
+                      </Link>
+                    </td>
+                    <td className="py-4 text-[15px] font-medium text-heading border-b">
+                      $56.00
+                    </td>
+                    <td className="py-4 text-[15px] font-medium text-heading border-b">
+                      <div className="w-20 py-1 px-3 border border-border rounded flex items-center justify-between gap-1">
+                        <input type="text" className="w-full" value={2} />
+                        <div className="flex flex-col">
+                          <IoIosArrowUp className="text-xs cursor-pointer" />
+                          <IoIosArrowDown className="text-xs cursor-pointer" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 text-[15px] font-medium text-heading border-b">
+                      $56.00
+                    </td>
+                    <td className="py-4 text-[15px] font-medium text-heading border-b">
+                      <RiDeleteBin6Line className="cursor-pointer text-body text-xl" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="py-4 border-b flex items-center gap-3">
+                      <img
+                        src="/images/products/1.jpg"
+                        className="w-14"
+                        alt=""
+                      />
+                      <Link
+                        to="#"
+                        className="text-sm text-body transition-all hover:text-primary"
+                      >
+                        Crunchy Triangle Chips Snacks
+                      </Link>
+                    </td>
+                    <td className="py-4 text-[15px] font-medium text-heading border-b">
+                      $56.00
+                    </td>
+                    <td className="py-4 text-[15px] font-medium text-heading border-b">
+                      <div className="w-20 py-1 px-3 border border-border rounded flex items-center justify-between gap-1">
+                        <input type="text" className="w-full" value={2} />
+                        <div className="flex flex-col">
+                          <IoIosArrowUp className="text-xs cursor-pointer" />
+                          <IoIosArrowDown className="text-xs cursor-pointer" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 text-[15px] font-medium text-heading border-b">
+                      $56.00
+                    </td>
+                    <td className="py-4 text-[15px] font-medium text-heading border-b">
+                      <RiDeleteBin6Line className="cursor-pointer text-body text-xl" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="py-4 border-b flex items-center gap-3">
+                      <img
+                        src="/images/products/1.jpg"
+                        className="w-14"
+                        alt=""
+                      />
+                      <Link
+                        to="#"
+                        className="text-sm text-body transition-all hover:text-primary"
+                      >
+                        Crunchy Triangle Chips Snacks
+                      </Link>
+                    </td>
+                    <td className="py-4 text-[15px] font-medium text-heading border-b">
+                      $56.00
+                    </td>
+                    <td className="py-4 text-[15px] font-medium text-heading border-b">
+                      <div className="w-20 py-1 px-3 border border-border rounded flex items-center justify-between gap-1">
+                        <input type="text" className="w-full" value={2} />
+                        <div className="flex flex-col">
+                          <IoIosArrowUp className="text-xs cursor-pointer" />
+                          <IoIosArrowDown className="text-xs cursor-pointer" />
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 text-[15px] font-medium text-heading border-b">
+                      $56.00
+                    </td>
+                    <td className="py-4 text-[15px] font-medium text-heading border-b">
+                      <RiDeleteBin6Line className="cursor-pointer text-body text-xl" />
+                    </td>
+                  </tr>
+                  {/* {cartElements} */}
+                </tbody>
               </table>
 
-              {cart?.totalQty === 0 && (
+              {/* {cart?.totalQty === 0 && (
                 <p className="mt-3">No Cart Items Found!!</p>
-              )}
+              )} */}
             </div>
           </div>
 
-          <div className="w-full md:min-w-[400px] md:max-w-[400px] xl:min-w-[500px] p-9 border-4 rounded-3xl bg-white">
-            <h2 className="text-[28px] leading-[28px] mb-4 font-semibold">
-              Cart totals
+          <div className="w-full md:min-w-[400px] md:max-w-[400px] xl:min-w-[500px] py-[10px] px-4 border border-border rounded h-fit bg-white">
+            <h2 className="text-xl leading-[24px] mb-4 font-semibold text-heading border-b border-border pb-4">
+              Summary
             </h2>
-            <div className="flex items-center justify-between gap-2 flex-wrap text-lg text-black py-5 border-b">
-              <span>Subtotal</span>
-              <span>${cart?.totalPrice}</span>
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center justify-between gap-2 flex-wrap text-lg text-black">
+                <span className="text-sm text-heading">Subtotal</span>
+                <span className="text-sm font-medium text-heading">
+                  {/* ${cart?.totalPrice} */}
+                  $30.00
+                </span>
+              </div>
+              <div className="flex items-center justify-between gap-2 flex-wrap text-lg text-black">
+                <span className="text-sm text-heading">Delivery Charges</span>
+                <span className="text-sm font-medium text-heading">$10.00</span>
+              </div>
+              <div className="flex items-center justify-between gap-2 flex-wrap text-lg text-black">
+                <span className="text-sm text-heading">Coupon Discount</span>
+                <span className="text-sm font-medium text-primary cursor-pointer">
+                  Apply Coupan
+                </span>
+              </div>
             </div>
-            <div className="flex items-center justify-between gap-2 flex-wrap text-lg text-black py-5 border-b">
-              <span>Shipping: Arlene </span>
-              <span className="text-[15px]">Flat rate: $10.00</span>
+
+            <div className="my-3 border flex items-center justify-between gap-4 border-border rounded-md">
+              <input
+                type="text"
+                placeholder="Enter Your Coupan Code"
+                className="px-4 py-3 w-full outline-none text-sm text-body"
+              />
+              <Button className="py-3 px-5 text-sm my-1 mr-5">Apply</Button>
             </div>
-            <div className="flex items-center justify-between gap-2 flex-wrap text-lg text-black py-5">
-              <span>Total</span>
-              <span className="font-semibold text-[28px] text-primary">
+
+            <div className="flex items-center justify-between gap-2 border-t border-border pt-3 flex-wrap text-lg text-black">
+              <span className="text-base font-medium text-heading">
+                Total Amount
+              </span>
+              <span className="text-base font-medium text-heading">
                 ${Number(cart?.totalPrice) + 10}
               </span>
             </div>
+
             <div className="mt-5">
               <Button href="/checkout" className="w-full block text-center">
-                Process to checkout
+                Place Order
               </Button>
             </div>
           </div>

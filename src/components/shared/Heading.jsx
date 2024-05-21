@@ -1,15 +1,11 @@
 import { cn } from "../../lib/utills";
 
-const Heading = ({ className = "", children }) => {
+const Heading = ({ className = "", title = "", subTitle = "" }) => {
   return (
-    <h2
-      className={cn(
-        "text-center text-[30px] sm:text-[36px] md:text-[40px] md:leading-[45px] lg:text-[45px] lg:leading-[50px]",
-        className
-      )}
-    >
-      {children}
-    </h2>
+    <div className={cn("flex flex-col gap-3", className)}>
+      <h2 className="text-[25px] leading-[25px] font-bold">{title}</h2>
+      <span className="text-sm font-light text-body">{subTitle}</span>
+    </div>
   );
 };
 

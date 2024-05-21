@@ -13,7 +13,7 @@ const Button = ({
   ...rest
 }) => {
   const styles = `
-    font-bold text-sm px-9 py-4 rounded-full transition-all  ${
+    font-bold text-sm px-9 py-4 rounded-md transition-all  ${
       loading && "cursor-not-allowed bg-gray-600 hover:bg-gray-600"
     } ${
     variant === "primary" &&
@@ -21,7 +21,9 @@ const Button = ({
   } ${
     variant === "secondary" &&
     "bg-white text-black hover:bg-black hover:text-white"
-  } ${variant === "dark" && "bg-black text-white hover:bg-primary"}
+  } ${variant === "dark" && "bg-black text-white hover:bg-primary"} ${
+    variant === "light-dark" && "bg-heading text-white hover:bg-primary"
+  }
   `;
 
   return href ? (
